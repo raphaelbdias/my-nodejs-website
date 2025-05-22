@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const encodedQuery = encodeURIComponent(query);
     
     // Construct API URL; using your provided sample options.
-    const url = `http://localhost:8000/api/search?module=${module}&query=${encodedQuery}&option_filters=nfmhcvaplsrwgeixtm&output_format=HTRML&output_encoding=UTF8&variant=0&locale=en`;
+    const url = `https://diatheke-api-v2-cjahfyezhha7evh8.canadacentral-01.azurewebsites.net/api/search?module=${module}&query=${encodedQuery}&option_filters=nfmhcvaplsrwgeixtm&output_format=HTRML&output_encoding=UTF8&variant=0&locale=en`;
     
     try {
       const response = await fetch(url, {

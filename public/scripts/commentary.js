@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
           moduleName = document.getElementById("commentary-dropdown").value;
         }
         const strongsNumber = code.substring(1); // e.g., "07225"
-        const url = `http://localhost:8000/api/commentaries?module=${moduleName}&strongs=${strongsNumber}`;
+        const url = `https://diatheke-api-v2-cjahfyezhha7evh8.canadacentral-01.azurewebsites.net/api/commentaries?module=${moduleName}&strongs=${strongsNumber}`;
         try {
           const response = await fetch(url, { headers: { "accept": "application/json" } });
           if (!response.ok) {
