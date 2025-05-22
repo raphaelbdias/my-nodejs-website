@@ -1,0 +1,16 @@
+{
+  "name": "my-nodejs-website",
+  "version": "1.0.0",
+  "description": "A simple Node.js website using HTML and CSS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}

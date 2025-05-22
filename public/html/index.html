@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Auth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,400;0,700&family=Roboto:ital,wght@0,100;0,400;0,700&family=Tinos:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand crimson-pro-bold">Think With Your Heart</div>
+    <nav>
+      <a class="nav-link roboto-regular" href="/html/index.html">Home</a>
+      <a class="nav-link roboto-regular" href="/html/welcome.html">Welcome</a>
+      <a class="nav-link roboto-regular" href="/html/about.html">About</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="tabs">
+      <button id="signup-tab" class="active">Sign Up</button>
+      <button id="login-tab">Login</button>
+    </div>
+    <div id="signup-form" class="form active">
+      <h2>Sign Up</h2>
+      <form id="form-signup">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email-signup">Email:</label>
+        <input type="email" id="email-signup" name="email" required>
+        
+        <label for="password-signup">Password:</label>
+        <input type="password" id="password-signup" name="password" required>
+        
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <label for="phone">Phone Number (optional):</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <div id="login-form" class="form">
+      <h2>Login</h2>
+      <form id="form-login">
+        <label for="email-login">Email:</label>
+        <input type="email" id="email-login" name="email" required>
+        
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" name="password" required>
+        
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <script src="../scripts/toggle.js"></script>
+</body>
+</html>

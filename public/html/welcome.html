@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,400;0,700&family=Roboto:ital,wght@0,100;0,400;0,700&family=Tinos:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="welcome-container">
+    <h1 id="welcome-heading">Welcome, User!</h1>
+    <p id="current-date"></p>
+  </div>
+
+  <!-- Bible Search Section -->
+  <div class="bible-search">
+    <h2>Bible Search</h2>
+    <div class="bible-search-row">
+      <div class="search-field">
+        <label for="bible-module">Module:</label>
+        <select id="bible-module">
+          <option value="KJV">KJV</option>
+          <!-- More modules can be added here -->
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="bible-book">Book:</label>
+        <select id="bible-book">
+          <option value="Genesis">Genesis</option>
+          <option value="Exodus">Exodus</option>
+          <option value="Leviticus">Leviticus</option>
+          <option value="Numbers">Numbers</option>
+          <option value="Deuteronomy">Deuteronomy</option>
+          <!-- Add additional books as needed -->
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="chapter">Chapter:</label>
+        <!-- Free text input for chapter -->
+        <input type="text" id="chapter" value="1">
+      </div>
+      <div class="search-field">
+        <button id="search-bible">Search Bible</button>
+      </div>
+    </div>
+    <!-- Bible Text Viewer -->
+    <div id="search-result" class="bible-viewer"></div>
+  </div>
+
+  <!-- Commentary Panel at the bottom -->
+  <div class="commentary-panel">
+    <label for="commentary-dropdown">Commentary Type:</label>
+    <select id="commentary-dropdown">
+      <option value="BDB_strongs" selected>BDB_strongs</option>
+      <!-- Additional commentary options can be added here -->
+    </select>
+    <div id="commentary-content"></div>
+  </div>
+  
+  <script src="../scripts/welcome.js"></script>
+  <script src="../scripts/bible-browser.js"></script>
+  <script src="../scripts/bible-search.js"></script>
+  <script src="../scripts/commentary.js"></script>
+  <script src="../scripts/populate-books.js"></script>
+   <script src="../scripts/populate-bibles.js"></script>
+</body>
+</html>

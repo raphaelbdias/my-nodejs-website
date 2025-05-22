@@ -1,0 +1,36 @@
+{
+  "bibles": [
+    {
+      "code": "Aleppo",
+      "description": "Aleppo Codex"
+    },
+    {
+      "code": "Byz",
+      "description": "The New Testament in the Original Greek: Byzantine Textform 2013"
+    },
+    {
+      "code": "Elzevir",
+      "description": "Elzevir Textus Receptus (1624)"
+    },
+    {
+      "code": "KJV",
+      "description": "King James Version (1769) with Strongs Numbers and Morphology and CatchWords"
+    },
+    {
+      "code": "OSHB",
+      "description": "Open Scriptures Hebrew Bible"
+    },
+    {
+      "code": "SPDSS",
+      "description": "Dead Sea Scrolls variants parallel to the Samaritan Pentateuch"
+    },
+    {
+      "code": "WLC",
+      "description": "Westminster Leningrad Codex"
+    },
+    {
+      "code": "YLT",
+      "description": "Young's Literal Translation (1898)"
+    }
+  ]
+}

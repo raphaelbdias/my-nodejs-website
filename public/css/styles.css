@@ -1,0 +1,369 @@
+:root {
+  /* CSS Theme Colors using HSL */
+  --barn-red: hsla(0, 100%, 24%, 1);
+  --fire-brick: hsla(356, 83%, 41%, 1);
+  --papaya-whip: hsla(40, 91%, 91%, 1);
+  --prussian-blue: hsla(201, 100%, 14%, 1);
+  --air-superiority-blue: hsla(203, 39%, 57%, 1);
+
+  /* CSS Gradients */
+  --gradient-top: linear-gradient(0deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-right: linear-gradient(90deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-bottom: linear-gradient(180deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-left: linear-gradient(270deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-top-right: linear-gradient(45deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-bottom-right: linear-gradient(135deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-top-left: linear-gradient(225deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-bottom-left: linear-gradient(315deg, var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+  --gradient-radial: radial-gradient(var(--barn-red), var(--fire-brick), var(--papaya-whip), var(--prussian-blue), var(--air-superiority-blue));
+}
+
+/* Global typography for the entire website using Crimson Pro */
+body, h1, h2, h3, h4, h5, h6, p, a, label, button, input, nav, header, footer, select {
+  font-family: "Crimson Pro", serif;
+}
+
+/* Basic styling for forms and layout */
+body {
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    overflow: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #4285F4;
+  color: #fff;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #4285F4;
+  border: none;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Styling for the welcome page */
+.welcome-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Include Google Fonts in your HTML head:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,400;0,700&family=Roboto:ital,wght@0,100;0,400;0,700&family=Tinos:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+*/
+
+/* Tinos font classes */
+.tinos-regular {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tinos-bold {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tinos-regular-italic {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tinos-bold-italic {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Roboto font classes */
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Crimson Pro font classes */
+.crimson-pro-regular {
+  font-family: "Crimson Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.crimson-pro-bold {
+  font-family: "Crimson Pro", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*
+  Theme usage guidelines:
+  - For Hebrew text (from API responses), use Tinos:
+      <p class="hebrew-text">...</p>
+  - For Greek text, use Roboto:
+      <p class="greek-text">...</p>
+  - For all other text, use Crimson Pro:
+      <p class="default-text">...</p>
+*/
+
+.hebrew-text {
+  /* Tinos for Hebrew script */
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.greek-text {
+  /* Roboto for Greek text */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.default-text {
+  /* Crimson Pro for everything else */
+  font-family: "Crimson Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--prussian-blue);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--papaya-whip);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar nav a {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--papaya-whip);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+  color: var(--fire-brick);
+}
+
+/* Bible Search Section Styles */
+.bible-search {
+  background: var(--papaya-whip);
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  max-width: 90%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bible-search h2 {
+  margin-top: 0;
+}
+
+.bible-search-row {
+  display: flex;
+  flex-direction: row; /* changed to horizontal layout */
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.search-field {
+  text-align: left;
+}
+
+.search-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.search-field select,
+.search-field input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.search-field button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--prussian-blue);
+  border: none;
+  color: var(--papaya-whip);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.search-field button:hover {
+  background: var(--fire-brick);
+}
+
+#search-result {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: var(--papaya-whip);
+  text-align: left;
+}
+
+/* Bible Text Viewer Styles */
+.bible-viewer {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+  border-radius: 5px;
+  max-height: 400px;  /* fixed height for a scrollable window */
+  overflow-y: auto;  /* vertical scrolling */
+}
+
+/* Commentary Panel Styles */
+.commentary-panel {
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  background: #fff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.commentary-panel label {
+  font-weight: bold;
+}
+
+.commentary-panel select {
+  padding: 6px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#commentary-content {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  border-radius: 3px;
+}
+
+/* Highlighting for strongs words */
+w[lemma] {
+  transition: background 0.2s;
+}
+
+w[lemma]:hover {
+  background: rgba(200, 200, 200, 0.4);
+  cursor: pointer;
+}
